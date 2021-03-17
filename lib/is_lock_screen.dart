@@ -22,3 +22,13 @@ Future<bool> enableShowLock() async {
   }
 }
 
+
+Future<bool> disableShowLock() async {
+  try {
+    return await _channel.invokeMethod('disableShowLock') as bool;
+  } catch (e) {
+    print(e.toString());
+    return null;
+  }
+}
+
