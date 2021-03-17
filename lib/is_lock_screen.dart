@@ -12,3 +12,13 @@ Future<bool> isLockScreen() async {
     return null;
   }
 }
+
+Future<bool> enableShowLock() async {
+  try {
+    return await _channel.invokeMethod('enableShowLock') as bool;
+  } catch (e) {
+    print(e.toString());
+    return null;
+  }
+}
+
